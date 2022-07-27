@@ -4,7 +4,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { TodoModel } from '../../models/TodoModel';
+import { TodoModel } from '../../../models/TodoModel';
 import { Input } from '@mui/material';
 import { Link } from 'react-router-dom';
 

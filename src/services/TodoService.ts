@@ -20,6 +20,16 @@ export class TodoService {
         console.log("service", JSON.stringify(todo))
         return fetch(`${this.apiUrl}/${todo.id}`, {method: "put", body: JSON.stringify(todo), headers: this.headers})
     }
-}
+
+    public create = (todo: TodoModel) => {
+        return fetch(`${this.apiUrl}`, {
+            method: "POST",
+            body: JSON.stringify(todo),
+            headers: { "Content-type": "Application/json" }
+        }).then((data) => data.json())
+    }
+
+    }
+
 
 export const todoService = Object.freeze(new TodoService())
